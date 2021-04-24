@@ -10,5 +10,5 @@ package kiyafetstok;
  * @author Bedran Özcan
  */
 public class kazak extends kiyafet{
-    
+
 }

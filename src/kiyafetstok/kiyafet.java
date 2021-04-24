@@ -11,18 +11,20 @@ package kiyafetstok;
  */
 public class kiyafet {
     String renk,beden,marka,tur;
-    int stoksayisi;
+    int stoksayisi,kiyafet_id,tur_id;
     float fiyat;
 
     public kiyafet() {
     }
 
-    public kiyafet(String renk, String beden, String marka, String tur, int stoksayisi, float fiyat) {
+    public kiyafet(String renk, String beden, String marka, String tur, int stoksayisi, int kiyafet_id, int tur_id, float fiyat) {
         this.renk = renk;
         this.beden = beden;
         this.marka = marka;
         this.tur = tur;
         this.stoksayisi = stoksayisi;
+        this.kiyafet_id = kiyafet_id;
+        this.tur_id = tur_id;
         this.fiyat = fiyat;
     }
 
@@ -66,6 +68,22 @@ public class kiyafet {
         this.stoksayisi = stoksayisi;
     }
 
+    public int getKiyafet_id() {
+        return kiyafet_id;
+    }
+
+    public void setKiyafet_id(int kiyafet_id) {
+        this.kiyafet_id = kiyafet_id;
+    }
+
+    public int getTur_id() {
+        return tur_id;
+    }
+
+    public void setTur_id(int tur_id) {
+        this.tur_id = tur_id;
+    }
+
     public float getFiyat() {
         return fiyat;
     }
@@ -74,4 +92,5 @@ public class kiyafet {
         this.fiyat = fiyat;
     }
     
+  
 }
