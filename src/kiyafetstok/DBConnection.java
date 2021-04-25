@@ -20,7 +20,7 @@ public class DBConnection {
         Connection c=null;
         try{
             Class.forName("com.mysql.jdbc.Driver").newInstance();
-            c=DriverManager.getConnection("jdbc:mysql://localhost:3306/kiyafetstok?user=root&password=123");
+            c=DriverManager.getConnection("jdbc:mysql://localhost:3306/kiyafetStok?user=root&password=4162");
         }catch(SQLException e){
             System.out.println(e.getMessage());
         } catch (ClassNotFoundException | InstantiationException | IllegalAccessException ex) {
