@@ -11,8 +11,8 @@ package kiyafetstok;
  */
 public class kiyafet {
     String renk,beden,marka,tur;
-    int stoksayisi,kiyafet_id,tur_id;
-    float fiyat;
+   int stoksayisi,kiyafet_id,tur_id;
+   float fiyat;
 
     public kiyafet() {
     }

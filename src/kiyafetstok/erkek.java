@@ -9,6 +9,7 @@ package kiyafetstok;
  *
  * @author Bedran Özcan
  */
-public class tshirt extends kiyafet{
-    int tshirt_id;
+public class erkek extends kiyafet{
+  private  int erkek_id;
+
 }

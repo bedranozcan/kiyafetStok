@@ -6,7 +6,7 @@ public class KiyafetStok {
 
     
     public static void main(String[] args) {
-        DBConnection db=new DBConnection();
+        Connector db=new Connector();
         db.connect();
         
     }

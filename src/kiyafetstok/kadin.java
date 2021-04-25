@@ -9,6 +9,7 @@ package kiyafetstok;
  *
  * @author Bedran Özcan
  */
-public class kazak extends kiyafet{
-    int kazak_id;
+public class kadin extends kiyafet{
+ private   int kadin_id;
+
 }

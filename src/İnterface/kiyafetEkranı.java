@@ -49,7 +49,6 @@ public class kiyafetEkranı extends javax.swing.JFrame {
         });
 
         jButton3.setText("Kazak");
-        jButton3.setActionCommand("Kazak");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton3ActionPerformed(evt);
