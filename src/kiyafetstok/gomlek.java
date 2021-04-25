@@ -10,5 +10,5 @@ package kiyafetstok;
  * @author Bedran Özcan
  */
 public class gomlek extends kiyafet{
-    
+    int gomlek_id;
 }
