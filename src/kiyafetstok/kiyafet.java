@@ -5,14 +5,19 @@
  */
 package kiyafetstok;
 
+import java.sql.Connection;
+
 /**
  *
  * @author Bedran Özcan
  */
 public class kiyafet {
-    String renk,beden,marka,tur;
-   int stoksayisi,kiyafet_id,tur_id;
-   float fiyat;
+
+    String renk, beden, marka, tur;
+    int stoksayisi, kiyafet_id, tur_id;
+    float fiyat;
+    private Connection connection;
+    private Connector connector;
 
     public kiyafet() {
     }
@@ -91,6 +96,33 @@ public class kiyafet {
     public void setFiyat(float fiyat) {
         this.fiyat = fiyat;
     }
+
+ 
     
-  
+    @Override
+    public String toString() {
+        return "kiyafet{"+"kiyafet_id="+kiyafet_id+",renk=" + renk + ", beden=" + beden + ", marka=" + marka + ", tur=" + tur + ", stoksayisi=" + stoksayisi +  ", tur_id=" + tur_id + ", fiyat=" + fiyat + ", connection=" + connection + ", connector=" + connector + '}';
+    }
+
+    public Connection getConnection() {
+        if (this.connection == null) {
+            this.connection = this.getConnector().connect();
+        }
+        return connection;
+    }
+
+    public void setConnection(Connection connection) {
+        this.connection = connection;
+    }
+
+    public Connector getConnector() {
+        if (this.connector == null) {
+            this.connector = new Connector();
+        }
+        return connector;
+    }
+
+    public void setConnector(Connector connector) {
+        this.connector = connector;
+    }
 }
