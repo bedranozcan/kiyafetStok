@@ -11,5 +11,13 @@ package kiyafetstok;
  */
 public class cocuk extends kiyafet{
   private  int cocuk_id;
+
+    public int getCocuk_id() {
+        return cocuk_id;
+    }
+
+    public void setCocuk_id(int cocuk_id) {
+        this.cocuk_id = cocuk_id;
+    }
     
 }

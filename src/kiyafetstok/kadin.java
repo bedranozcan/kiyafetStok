@@ -12,4 +12,12 @@ package kiyafetstok;
 public class kadin extends kiyafet{
  private   int kadin_id;
 
+    public int getKadin_id() {
+        return kadin_id;
+    }
+
+    public void setKadin_id(int kadin_id) {
+        this.kadin_id = kadin_id;
+    }
+
 }

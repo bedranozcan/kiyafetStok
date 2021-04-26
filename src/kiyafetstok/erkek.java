@@ -12,4 +12,12 @@ package kiyafetstok;
 public class erkek extends kiyafet{
   private  int erkek_id;
 
+    public int getErkek_id() {
+        return erkek_id;
+    }
+
+    public void setErkek_id(int erkek_id) {
+        this.erkek_id = erkek_id;
+    }
+
 }
