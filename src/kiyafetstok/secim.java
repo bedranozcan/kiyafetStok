@@ -21,7 +21,7 @@ public class secim {
     int secim;
 
     public void secim() {
-        while (secim !=5) {
+        while (secim != 5) {
             System.out.println("1)Kıyafet Ekle  2)Kıyafet Sil  3)Kıyafet Guncelle  4)Kıyafet Listele  5)Çıkış");
             secim = input.nextInt();
             switch (secim) {
@@ -42,7 +42,7 @@ public class secim {
                     int stoksayisi = input.nextInt();
                     k.setStoksayisi(stoksayisi);
                     System.out.println("Kıyafetin fiyatını giriniz");
-                    float fiyat = input.nextInt();
+                    float fiyat = input.nextFloat();
                     k.setFiyat(fiyat);
                     System.out.println("Kıyafetin turunun idsini giriniz");
                     int tur_id = input.nextInt();
@@ -60,13 +60,28 @@ public class secim {
                     break;
                 }
                 case 3: {
+                    kiyafet k_update = new kiyafet();
+                    kiyafet k_database = new kiyafet();
                     kdao.kiyafet_listele();
                     System.out.println("Kiyafet GUNCELLE\n");
-                    System.out.print("Güncellenecek kiyafetin  turunun idisini giriniz\n");
+                    System.out.print("Güncellenecek kiyafetin  idisini giriniz\n");
                     int kiyafet_id = input.nextInt();
-                    System.out.println("Yeni turu giriniz: ");
-                    String tur = input.next();
-                    kdao.update(k, kiyafet_id, tur);
+                    k_database = kdao.find(kiyafet_id);
+                    System.out.println("Yeni Renk giriniz: ");
+                    k_update.setRenk(input.next());
+                    System.out.println("Yeni Beden giriniz: ");
+                    k_update.setBeden(input.next());
+                    System.out.println("Yeni Marka giriniz: ");
+                    k_update.setMarka(input.next());
+                    System.out.println("Yeni Tur giriniz: ");
+                    k_update.setTur(input.next());
+                    System.out.println("Yeni Stok Sayısı giriniz: ");
+                    k_update.setStoksayisi(input.nextInt());
+                    System.out.println("Yeni Fiyatı giriniz: ");
+                    k_update.setFiyat(input.nextInt());
+                    System.out.println("Yeni Tur_ID giriniz: ");
+                    k_update.setTur_id(input.nextInt());
+                    kdao.update(k_update, k_database, kiyafet_id);
                     break;
                 }
                 case 4: {

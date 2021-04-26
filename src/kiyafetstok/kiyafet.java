@@ -97,8 +97,6 @@ public class kiyafet {
         this.fiyat = fiyat;
     }
 
- 
-    
     @Override
     public String toString() {
         return "kiyafet{"+"kiyafet_id="+kiyafet_id+",renk=" + renk + ", beden=" + beden + ", marka=" + marka + ", tur=" + tur + ", stoksayisi=" + stoksayisi +  ", tur_id=" + tur_id + ", fiyat=" + fiyat + ", connection=" + connection + ", connector=" + connector + '}';
