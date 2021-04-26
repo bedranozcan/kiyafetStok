@@ -1,7 +1,7 @@
 package kiyafetstok;
 
 import java.util.Scanner;
-import kiyafetstok.DAO.kiyafetdao;
+
 
 public class KiyafetStok {
 
