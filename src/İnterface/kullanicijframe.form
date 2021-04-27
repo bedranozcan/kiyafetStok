@@ -113,6 +113,9 @@
             </Property>
             <Property name="text" type="java.lang.String" value="G&#x130;R&#x130;&#x15e;"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton1ActionPerformed"/>
+          </Events>
         </Component>
       </SubComponents>
     </Container>

@@ -5,6 +5,8 @@
  */
 package İnterface;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author Bedran Özcan
@@ -57,6 +59,11 @@ public class kullanicijframe extends javax.swing.JFrame {
 
         jButton1.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
         jButton1.setText("GİRİŞ");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -104,13 +111,28 @@ public class kullanicijframe extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jPasswordField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jPasswordField1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jPasswordField1ActionPerformed
-
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
-        // TODO add your handling code here:
+
     }//GEN-LAST:event_jTextField1ActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        String k_ad = "Admin";
+        String password = "1234";
+        if (jTextField1.getText().equals(k_ad) && jPasswordField1.getText().equals(password)) {
+            JOptionPane.showMessageDialog(null, "Giriş Başarılı");
+            kiyafetEkrani yeni = new kiyafetEkrani();
+            yeni.setVisible(true);
+            yeni.parent = this;
+        } else {
+            JOptionPane.showMessageDialog(null, "Kullanıcı adı veya şifre yanlış");
+
+        }
+
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jPasswordField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jPasswordField1ActionPerformed
+
+    }//GEN-LAST:event_jPasswordField1ActionPerformed
 
     /**
      * @param args the command line arguments
