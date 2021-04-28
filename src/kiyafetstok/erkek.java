@@ -11,6 +11,7 @@ package kiyafetstok;
  */
 public class erkek extends kiyafet{
   private  int erkek_id;
+  private int sayi;
 
     public int getErkek_id() {
         return erkek_id;
