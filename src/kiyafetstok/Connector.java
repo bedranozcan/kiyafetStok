@@ -34,9 +34,10 @@ public class Connector  {
     public Connection connect() {
         Connection c= null;
         try {
+            
             Class.forName("com.mysql.jdbc.Driver").newInstance(); 
-            c = DriverManager.getConnection("jdbc:mysql://localhost:3306/kiyafetstok?user=root&password=4162");
-            //System.out.println("Database Succesfuly");
+            c = DriverManager.getConnection("jdbc:mysql://localhost:3306/kiyafetstok?user=root&password=123");
+           
         } catch (ClassNotFoundException | InstantiationException | IllegalAccessException | SQLException ex) {
             Logger.getLogger(Connector.class.getName()).log(Level.SEVERE, null, ex);
         }

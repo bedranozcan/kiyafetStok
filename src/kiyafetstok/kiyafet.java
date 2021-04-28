@@ -99,8 +99,9 @@ public class kiyafet {
 
     @Override
     public String toString() {
-        return "kiyafet{"+"kiyafet_id="+kiyafet_id+",renk=" + renk + ", beden=" + beden + ", marka=" + marka + ", tur=" + tur + ", stoksayisi=" + stoksayisi +  ", tur_id=" + tur_id + ", fiyat=" + fiyat + ", connection=" + connection + ", connector=" + connector + '}';
+        return "kiyafet{"+"kiyafet_id="+kiyafet_id+",renk=" + renk + ", beden=" + beden + ", marka=" + marka + ", tur=" + tur + ", stoksayisi=" + stoksayisi +  ", fiyat=" + fiyat + ", tur_id=" + tur_id +'}';
     }
+    
 
     public Connection getConnection() {
         if (this.connection == null) {

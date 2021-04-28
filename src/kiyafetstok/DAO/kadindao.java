@@ -43,7 +43,7 @@ public class kadindao {
             while (rs.next()) {
 
                 kadin k = new kadin();
-                k.setKiyafet_id(rs.getInt("kadin_id"));
+                k.setKadin_id(rs.getInt("kadin_id"));
                 k.setRenk(rs.getString("renk"));
                 k.setBeden(rs.getString("beden"));
                 k.setMarka(rs.getString("marka"));
@@ -107,10 +107,10 @@ public class kadindao {
     }
 
 
-    public void delete(kadin kadin) {
+    public void delete(String selectedID) {
 
         try {
-            String sql = ("delete  from kadin where kadin_id=" + kadin.getKadin_id());
+            String sql = ("delete  from kadin where kadin_id=" +selectedID);
             Statement st = this.getConnection().createStatement();
             st.executeUpdate(sql);
             System.out.println("Silme İslemi Basarili.");

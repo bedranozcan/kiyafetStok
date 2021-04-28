@@ -13,6 +13,7 @@ import kiyafetstok.DAO.erkekdao;
  * @author Bedran Özcan
  */
 public class erkeksecim {
+
     Scanner input = new Scanner(System.in);
     erkek e = new erkek();
     erkekdao edao = new erkekdao();
@@ -53,7 +54,7 @@ public class erkeksecim {
                     System.out.println("Silinicek olan kıyafetin idsini giriniz");
                     int erkek_id = input.nextInt();
                     e.setErkek_id(erkek_id);
-                    edao.delete(e);
+                    edao.delete(String.valueOf(e.getErkek_id()));
                     edao.kiyafet_listele();
                     break;
                 }

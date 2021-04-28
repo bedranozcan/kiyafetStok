@@ -41,7 +41,7 @@ public class erkekdao {
             while (rs.next()) {
 
                 erkek e = new erkek();
-                e.setKiyafet_id(rs.getInt("erkek_id"));
+                e.setErkek_id(rs.getInt("erkek_id"));
                 e.setRenk(rs.getString("renk"));
                 e.setBeden(rs.getString("beden"));
                 e.setMarka(rs.getString("marka"));
@@ -105,10 +105,10 @@ public class erkekdao {
     }
 
 
-    public void delete(erkek erkek) {
+    public void delete(String selectedID) {
 
         try {
-            String sql = ("delete  from erkek where erkek_id=" + erkek.getErkek_id());
+            String sql = ("delete  from erkek where erkek_id=" + selectedID);
             Statement st = this.getConnection().createStatement();
             st.executeUpdate(sql);
             System.out.println("Silme İslemi Basarili.");

@@ -53,7 +53,7 @@ public class cocuksecim {
                     System.out.println("Silinicek olan kıyafetin idsini giriniz");
                     int cocuk_id = input.nextInt();
                     c.setCocuk_id(cocuk_id);
-                    cdao.delete(c);
+                    cdao.delete(String.valueOf(c.getCocuk_id()));
                     cdao.kiyafet_listele();
                     break;
                 }

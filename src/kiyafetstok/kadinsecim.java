@@ -55,7 +55,7 @@ public class kadinsecim {
                     System.out.println("Silinicek olan kıyafetin idsini giriniz");
                     int kadin_id = input.nextInt();
                     k.setKadin_id(kadin_id);
-                    kdao.delete(k);
+                    kdao.delete(String.valueOf(k.getKadin_id()));
                     kdao.kiyafet_listele();
                     break;
                 }

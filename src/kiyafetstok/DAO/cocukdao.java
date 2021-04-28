@@ -43,7 +43,7 @@ public class cocukdao {
             while (rs.next()) {
 
                 cocuk c = new cocuk();
-                c.setKiyafet_id(rs.getInt("kadin_id"));
+                c.setCocuk_id(rs.getInt("cocuk_id"));
                 c.setRenk(rs.getString("renk"));
                 c.setBeden(rs.getString("beden"));
                 c.setMarka(rs.getString("marka"));
@@ -107,10 +107,10 @@ public class cocukdao {
     }
 
 
-    public void delete(cocuk cocuk) {
+    public void delete(String selectedID) {
 
         try {
-            String sql = ("delete  from cocuk where cocuk_id=" + cocuk.getCocuk_id());
+            String sql = ("delete  from cocuk where cocuk_id=" + selectedID);
             Statement st = this.getConnection().createStatement();
             st.executeUpdate(sql);
             System.out.println("Silme İslemi Basarili.");
