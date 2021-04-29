@@ -46,7 +46,7 @@ public class erkekEkle extends javax.swing.JFrame {
         beden = new javax.swing.JTextField();
         stok = new javax.swing.JTextField();
         erkekeklebuton = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
+        geritusu = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -77,11 +77,11 @@ public class erkekEkle extends javax.swing.JFrame {
             }
         });
 
-        jButton5.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jButton5.setText("GERİ");
-        jButton5.addActionListener(new java.awt.event.ActionListener() {
+        geritusu.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        geritusu.setText("GERİ");
+        geritusu.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton5ActionPerformed(evt);
+                geritusuActionPerformed(evt);
             }
         });
 
@@ -103,7 +103,7 @@ public class erkekEkle extends javax.swing.JFrame {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(beden, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 157, Short.MAX_VALUE)
-                        .addComponent(jButton5)
+                        .addComponent(geritusu)
                         .addGap(22, 22, 22))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -146,7 +146,7 @@ public class erkekEkle extends javax.swing.JFrame {
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(beden, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(geritusu, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(15, 15, 15)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -190,24 +190,25 @@ public class erkekEkle extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_bedenActionPerformed
 
-    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
-      erkekKiyafet yeni = new erkekKiyafet();
+    private void geritusuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_geritusuActionPerformed
+        dispose();
+        erkekKiyafet yeni = new erkekKiyafet();
         yeni.setVisible(true);
         yeni.child = this;
-    }//GEN-LAST:event_jButton5ActionPerformed
+    }//GEN-LAST:event_geritusuActionPerformed
 
     private void erkekeklebutonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_erkekeklebutonMouseClicked
         erkek import_e = new erkek();
-       erkekdao edao = new erkekdao();
-       import_e.setRenk(renk.getText());
-       import_e.setBeden(beden.getText());
-       import_e.setMarka(marka.getText());
-       import_e.setTur(tur.getText());
-       import_e.setStoksayisi(Integer.parseInt(stok.getText()));
-       import_e.setFiyat(Float.parseFloat(fiyat.getText()));
-       import_e.setStoksayisi(Integer.parseInt(tur_id.getText()));
-       
-       edao.insert(import_e);
+        erkekdao edao = new erkekdao();
+        import_e.setRenk(renk.getText());
+        import_e.setBeden(beden.getText());
+        import_e.setMarka(marka.getText());
+        import_e.setTur(tur.getText());
+        import_e.setStoksayisi(Integer.parseInt(stok.getText()));
+        import_e.setFiyat(Float.parseFloat(fiyat.getText()));
+        import_e.setStoksayisi(Integer.parseInt(tur_id.getText()));
+
+        edao.insert(import_e);
     }//GEN-LAST:event_erkekeklebutonMouseClicked
 
     /**
@@ -251,7 +252,7 @@ public class erkekEkle extends javax.swing.JFrame {
     private javax.swing.JTextField beden;
     private javax.swing.JButton erkekeklebuton;
     private javax.swing.JTextField fiyat;
-    private javax.swing.JButton jButton5;
+    private javax.swing.JButton geritusu;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel4;

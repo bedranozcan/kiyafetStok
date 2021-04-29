@@ -77,7 +77,7 @@ public class kadinSilGuncelListe extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         silbutonu = new javax.swing.JButton();
         listelebutonu = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
+        geritusu = new javax.swing.JButton();
         guncellebutonu = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         kadintablo = new javax.swing.JTable();
@@ -98,10 +98,10 @@ public class kadinSilGuncelListe extends javax.swing.JFrame {
             }
         });
 
-        jButton3.setText("GERİ");
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
+        geritusu.setText("GERİ");
+        geritusu.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+                geritusuActionPerformed(evt);
             }
         });
 
@@ -115,7 +115,7 @@ public class kadinSilGuncelListe extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(jButton3, javax.swing.GroupLayout.DEFAULT_SIZE, 99, Short.MAX_VALUE))
+                        .addComponent(geritusu, javax.swing.GroupLayout.DEFAULT_SIZE, 99, Short.MAX_VALUE))
                     .addComponent(listelebutonu, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(silbutonu, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(guncellebutonu, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -125,7 +125,7 @@ public class kadinSilGuncelListe extends javax.swing.JFrame {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(geritusu, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(silbutonu, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
@@ -196,11 +196,12 @@ public class kadinSilGuncelListe extends javax.swing.JFrame {
             doldur();//doldur();// TODO add your handling code here:
     }//GEN-LAST:event_listelebutonuActionPerformed
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+    private void geritusuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_geritusuActionPerformed
+         dispose();
         kadinKiyafet yeni = new kadinKiyafet();
         yeni.setVisible(true);
         yeni.child5 = this;
-    }//GEN-LAST:event_jButton3ActionPerformed
+    }//GEN-LAST:event_geritusuActionPerformed
 
     private void silbutonuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_silbutonuActionPerformed
        String selectedData = null;
@@ -291,8 +292,8 @@ public class kadinSilGuncelListe extends javax.swing.JFrame {
     }
     public kadinKiyafet parent;
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton geritusu;
     private javax.swing.JButton guncellebutonu;
-    private javax.swing.JButton jButton3;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable kadintablo;

@@ -45,7 +45,7 @@ public class kadinEkle extends javax.swing.JFrame {
         beden = new javax.swing.JTextField();
         stok = new javax.swing.JTextField();
         eklebuton = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
+        geritusu = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -82,10 +82,10 @@ public class kadinEkle extends javax.swing.JFrame {
             }
         });
 
-        jButton2.setText("GERİ");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        geritusu.setText("GERİ");
+        geritusu.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                geritusuActionPerformed(evt);
             }
         });
 
@@ -130,7 +130,7 @@ public class kadinEkle extends javax.swing.JFrame {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(beden, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 128, Short.MAX_VALUE)
-                        .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(geritusu, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(37, 37, 37))))
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(49, 49, 49)
@@ -150,7 +150,7 @@ public class kadinEkle extends javax.swing.JFrame {
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(beden, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(geritusu, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(15, 15, 15)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -189,11 +189,12 @@ public class kadinEkle extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-       kadinKiyafet yeni = new kadinKiyafet();
+    private void geritusuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_geritusuActionPerformed
+        dispose();
+        kadinKiyafet yeni = new kadinKiyafet();
         yeni.setVisible(true);
         yeni.child4 = this;
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_geritusuActionPerformed
 
     private void renkActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_renkActionPerformed
         // TODO add your handling code here:
@@ -259,7 +260,7 @@ public class kadinEkle extends javax.swing.JFrame {
     private javax.swing.JTextField beden;
     private javax.swing.JButton eklebuton;
     private javax.swing.JTextField fiyat;
-    private javax.swing.JButton jButton2;
+    private javax.swing.JButton geritusu;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel4;

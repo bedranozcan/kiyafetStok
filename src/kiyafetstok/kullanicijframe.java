@@ -35,7 +35,7 @@ public class kullanicijframe extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         jPasswordField1 = new javax.swing.JPasswordField();
         jTextField1 = new javax.swing.JTextField();
-        jButton1 = new javax.swing.JButton();
+        giristusu = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -58,11 +58,11 @@ public class kullanicijframe extends javax.swing.JFrame {
             }
         });
 
-        jButton1.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
-        jButton1.setText("GİRİŞ");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        giristusu.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
+        giristusu.setText("GİRİŞ");
+        giristusu.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                giristusuActionPerformed(evt);
             }
         });
 
@@ -79,7 +79,7 @@ public class kullanicijframe extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jTextField1, javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jPasswordField1, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jButton1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 164, Short.MAX_VALUE))
+                    .addComponent(giristusu, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 164, Short.MAX_VALUE))
                 .addContainerGap(149, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
@@ -94,7 +94,7 @@ public class kullanicijframe extends javax.swing.JFrame {
                     .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jPasswordField1, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(26, 26, 26)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(giristusu, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(85, Short.MAX_VALUE))
         );
 
@@ -116,7 +116,8 @@ public class kullanicijframe extends javax.swing.JFrame {
 
     }//GEN-LAST:event_jTextField1ActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void giristusuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_giristusuActionPerformed
+         dispose();
         String k_ad = "Admin";
         String password = "1234";
         if (jTextField1.getText().equals(k_ad) && jPasswordField1.getText().equals(password)) {
@@ -129,7 +130,7 @@ public class kullanicijframe extends javax.swing.JFrame {
 
         }
 
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_giristusuActionPerformed
 
     private void jPasswordField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jPasswordField1ActionPerformed
 
@@ -172,7 +173,7 @@ public class kullanicijframe extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
+    private javax.swing.JButton giristusu;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;

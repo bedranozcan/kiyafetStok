@@ -7,7 +7,6 @@ package kiyafetstok;
 
 import kiyafetstok.DAO.cocukdao;
 
-
 /**
  *
  * @author ali_k
@@ -46,7 +45,7 @@ public class cocukEkle extends javax.swing.JFrame {
         beden = new javax.swing.JTextField();
         stok = new javax.swing.JTextField();
         eklebutonu = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
+        gerituşu = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -70,11 +69,16 @@ public class cocukEkle extends javax.swing.JFrame {
                 eklebutonuMouseClicked(evt);
             }
         });
-
-        jButton2.setText("GERİ");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        eklebutonu.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                eklebutonuActionPerformed(evt);
+            }
+        });
+
+        gerituşu.setText("GERİ");
+        gerituşu.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                gerituşuActionPerformed(evt);
             }
         });
 
@@ -96,7 +100,7 @@ public class cocukEkle extends javax.swing.JFrame {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(beden, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 133, Short.MAX_VALUE)
-                        .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(gerituşu, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(31, 31, 31))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -141,7 +145,7 @@ public class cocukEkle extends javax.swing.JFrame {
                             .addComponent(beden, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(34, 34, 34)
-                        .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(gerituşu, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -180,24 +184,29 @@ public class cocukEkle extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-         cocukKiyafet yeni = new cocukKiyafet();
+    private void gerituşuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_gerituşuActionPerformed
+        dispose();
+        cocukKiyafet yeni = new cocukKiyafet();
         yeni.setVisible(true);
         yeni.child7 = this;
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_gerituşuActionPerformed
 
     private void eklebutonuMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_eklebutonuMouseClicked
-       cocuk  c= new cocuk();
-       cocukdao cdao = new cocukdao();
-       c.setRenk(renk.getText());
-       c.setBeden(beden.getText());
-       c.setMarka(marka.getText());
-       c.setTur(tur.getText());
-       c.setStoksayisi(Integer.parseInt(stok.getText()));
-       c.setFiyat(Float.parseFloat(fiyat.getText()));
-       c.setStoksayisi(Integer.parseInt(tur_id.getText()));
-       cdao.insert(c);
+        cocuk c = new cocuk();
+        cocukdao cdao = new cocukdao();
+        c.setRenk(renk.getText());
+        c.setBeden(beden.getText());
+        c.setMarka(marka.getText());
+        c.setTur(tur.getText());
+        c.setStoksayisi(Integer.parseInt(stok.getText()));
+        c.setFiyat(Float.parseFloat(fiyat.getText()));
+        c.setStoksayisi(Integer.parseInt(tur_id.getText()));
+        cdao.insert(c);
     }//GEN-LAST:event_eklebutonuMouseClicked
+
+    private void eklebutonuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_eklebutonuActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_eklebutonuActionPerformed
 
     /**
      * @param args the command line arguments
@@ -239,7 +248,7 @@ public class cocukEkle extends javax.swing.JFrame {
     private javax.swing.JTextField beden;
     private javax.swing.JButton eklebutonu;
     private javax.swing.JTextField fiyat;
-    private javax.swing.JButton jButton2;
+    private javax.swing.JButton gerituşu;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel4;
