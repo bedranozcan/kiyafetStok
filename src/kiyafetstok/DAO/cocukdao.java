@@ -11,8 +11,11 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import kiyafetstok.Connector;
 import kiyafetstok.cocuk;
+import kiyafetstok.erkek;
 
 
 /**
@@ -120,6 +123,20 @@ public class cocukdao {
         }
 
     }
+    public void updateGuncelle(cocuk c ){
+         try {
+             String sql = ("update kadin set renk='" + c.getRenk() + "',beden='"
+                     +c.getBeden()+"',marka='"+c.getMarka()+"',tur='"+c.getTur()+"',stoksayisi="
+                     +c.getStoksayisi()+",fiyat=("+c.getFiyat()+"),tur_id="
+                             +c.getTur_id()+" where cocuk_id=" + c.getCocuk_id());
+             Statement st = this.getConnection().createStatement();
+             st.executeUpdate(sql);
+         } catch (SQLException ex) {
+             Logger.getLogger(cocukdao.class.getName()).log(Level.SEVERE, null, ex);
+         }
+               
+           
+       }
 
     public void update(cocuk kf, cocuk get_Database, int cocuk_id) {
 

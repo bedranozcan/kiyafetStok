@@ -10,8 +10,11 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import kiyafetstok.Connector;
 import kiyafetstok.erkek;
+import kiyafetstok.kadin;
 
 /**
  *
@@ -118,6 +121,20 @@ public class erkekdao {
         }
 
     }
+    public void updateGuncelle(erkek e ){
+         try {
+             String sql = ("update kadin set renk='" + e.getRenk() + "',beden='"
+                     +e.getBeden()+"',marka='"+e.getMarka()+"',tur='"+e.getTur()+"',stoksayisi="
+                     +e.getStoksayisi()+",fiyat=("+e.getFiyat()+"),tur_id="
+                             +e.getTur_id()+" where erkek_id=" + e.getErkek_id());
+             Statement st = this.getConnection().createStatement();
+             st.executeUpdate(sql);
+         } catch (SQLException ex) {
+             Logger.getLogger(erkekdao.class.getName()).log(Level.SEVERE, null, ex);
+         }
+               
+           
+       }
 
     public void update(erkek kf, erkek get_Database, int erkek_id) {
 

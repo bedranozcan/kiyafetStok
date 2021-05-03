@@ -85,10 +85,10 @@ public class cocukKiyafet extends javax.swing.JFrame {
                             .addComponent(siltusu, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(guncelletusu, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(listeletusu, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addContainerGap(311, Short.MAX_VALUE))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(ekletusu, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 204, Short.MAX_VALUE)
                         .addComponent(geritusu, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(35, 35, 35))))
         );
@@ -105,56 +105,25 @@ public class cocukKiyafet extends javax.swing.JFrame {
                 .addComponent(guncelletusu, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(37, 37, 37)
                 .addComponent(listeletusu, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(56, Short.MAX_VALUE))
+                .addContainerGap(82, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 405, Short.MAX_VALUE)
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 380, Short.MAX_VALUE)
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         getAccessibleContext().setAccessibleName("erkekpanel");
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
-
-    private void ekletusuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ekletusuActionPerformed
-         dispose();
-        cocukEkle yeni = new cocukEkle();
-        yeni.setVisible(true);
-        yeni.parent = this;
-    }//GEN-LAST:event_ekletusuActionPerformed
-
-    private void siltusuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_siltusuActionPerformed
-       dispose();
-        cocukSilGuncelListe yeni = new cocukSilGuncelListe();
-        yeni.setVisible(true);
-        yeni.parent = this;
-    }//GEN-LAST:event_siltusuActionPerformed
-
-    private void guncelletusuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_guncelletusuActionPerformed
-         dispose();
-        cocukSilGuncelListe yeni = new cocukSilGuncelListe();
-        yeni.setVisible(true);
-        yeni.parent = this;
-    }//GEN-LAST:event_guncelletusuActionPerformed
-
-    private void listeletusuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_listeletusuActionPerformed
-         dispose();
-        cocukSilGuncelListe yeni = new cocukSilGuncelListe();
-        yeni.setVisible(true);
-        yeni.parent = this;
-    }//GEN-LAST:event_listeletusuActionPerformed
 
     private void geritusuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_geritusuActionPerformed
         dispose();
@@ -162,6 +131,34 @@ public class cocukKiyafet extends javax.swing.JFrame {
         yeni.setVisible(true);
         yeni.child6 = this;
     }//GEN-LAST:event_geritusuActionPerformed
+
+    private void listeletusuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_listeletusuActionPerformed
+        dispose();
+        cocukSil yeni = new cocukSil();
+        yeni.setVisible(true);
+        yeni.parent = this;
+    }//GEN-LAST:event_listeletusuActionPerformed
+
+    private void guncelletusuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_guncelletusuActionPerformed
+        dispose();
+        cocukGuncelle yeni = new cocukGuncelle();
+        yeni.setVisible(true);
+
+    }//GEN-LAST:event_guncelletusuActionPerformed
+
+    private void siltusuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_siltusuActionPerformed
+        dispose();
+        cocukSil yeni = new cocukSil();
+        yeni.setVisible(true);
+        yeni.parent = this;
+    }//GEN-LAST:event_siltusuActionPerformed
+
+    private void ekletusuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ekletusuActionPerformed
+        dispose();
+        cocukEkle yeni = new cocukEkle();
+        yeni.setVisible(true);
+        yeni.parent = this;
+    }//GEN-LAST:event_ekletusuActionPerformed
 
     /**
      * @param args the command line arguments
@@ -215,7 +212,7 @@ public class cocukKiyafet extends javax.swing.JFrame {
     }
     public kiyafetEkrani parent;
     public cocukEkle child7;
-     public cocukSilGuncelListe child8;
+     public cocukSil child8;
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton ekletusu;
     private javax.swing.JButton geritusu;

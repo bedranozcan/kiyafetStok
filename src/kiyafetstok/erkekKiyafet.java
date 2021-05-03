@@ -86,7 +86,7 @@ public class erkekKiyafet extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addComponent(ekletusu, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 207, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 235, Short.MAX_VALUE)
                 .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(23, 23, 23))
         );
@@ -113,9 +113,9 @@ public class erkekKiyafet extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 405, Short.MAX_VALUE)
+            .addGap(0, 435, Short.MAX_VALUE)
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -127,6 +127,7 @@ public class erkekKiyafet extends javax.swing.JFrame {
         getAccessibleContext().setAccessibleName("erkekpanel");
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void ekletusuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ekletusuActionPerformed
@@ -138,21 +139,21 @@ public class erkekKiyafet extends javax.swing.JFrame {
 
     private void guncelletusuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_guncelletusuActionPerformed
          dispose();
-        erkekSilGuncelListe yeni = new erkekSilGuncelListe();
+        erkekGuncelle yeni = new erkekGuncelle();
         yeni.setVisible(true);
-        yeni.parent = this;
+        
     }//GEN-LAST:event_guncelletusuActionPerformed
 
     private void siltusuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_siltusuActionPerformed
          dispose();
-        erkekSilGuncelListe yeni = new erkekSilGuncelListe();
+        erkekSil yeni = new erkekSil();
         yeni.setVisible(true);
         yeni.parent = this;
     }//GEN-LAST:event_siltusuActionPerformed
 
     private void listelemetusuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_listelemetusuActionPerformed
          dispose();
-        erkekSilGuncelListe yeni = new erkekSilGuncelListe();
+        erkekSil yeni = new erkekSil();
         yeni.setVisible(true);
         yeni.parent = this;
     }//GEN-LAST:event_listelemetusuActionPerformed
@@ -205,7 +206,7 @@ public class erkekKiyafet extends javax.swing.JFrame {
     }
     public kiyafetEkrani parent;
     public erkekEkle child;
-    public erkekSilGuncelListe child2;
+    public erkekSil child2;
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton ekletusu;
     private javax.swing.JButton guncelletusu;

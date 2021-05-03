@@ -11,6 +11,8 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import kiyafetstok.Connector;
 import kiyafetstok.kadin;
 import kiyafetstok.kiyafet;
@@ -120,7 +122,20 @@ public class kadindao {
         }
 
     }
-
+       public void updateGuncelle(kadin k ){
+         try {
+             String sql = ("update kadin set renk='" + k.getRenk() + "',beden='"
+                     +k.getBeden()+"',marka='"+k.getMarka()+"',tur='"+k.getTur()+"',stoksayisi="
+                     +k.getStoksayisi()+",fiyat=("+k.getFiyat()+"),tur_id="
+                             +k.getTur_id()+" where kadin_id=" + k.getKadin_id());
+             Statement st = this.getConnection().createStatement();
+             st.executeUpdate(sql);
+         } catch (SQLException ex) {
+             Logger.getLogger(kadindao.class.getName()).log(Level.SEVERE, null, ex);
+         }
+               
+           
+       }
     public void update(kiyafet kf, kiyafet get_Database, int kadin_id) {
 
         try {

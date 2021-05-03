@@ -85,10 +85,10 @@ public class kadinKiyafet extends javax.swing.JFrame {
                             .addComponent(siltusu, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(guncelletusu, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(listelemetusu))
-                        .addContainerGap(308, Short.MAX_VALUE))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(ekletusu, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 164, Short.MAX_VALUE)
                         .addComponent(geritusu, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(29, 29, 29))))
         );
@@ -113,9 +113,11 @@ public class kadinKiyafet extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 405, Short.MAX_VALUE)
+            .addGap(0, 407, Short.MAX_VALUE)
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGroup(layout.createSequentialGroup()
+                    .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addContainerGap()))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -127,6 +129,7 @@ public class kadinKiyafet extends javax.swing.JFrame {
         getAccessibleContext().setAccessibleName("erkekpanel");
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void geritusuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_geritusuActionPerformed
@@ -145,21 +148,21 @@ public class kadinKiyafet extends javax.swing.JFrame {
 
     private void siltusuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_siltusuActionPerformed
         dispose();
-        kadinSilGuncelListe yeni = new kadinSilGuncelListe();
+        kadinSil yeni = new kadinSil();
         yeni.setVisible(true);
         yeni.parent = this;
     }//GEN-LAST:event_siltusuActionPerformed
 
     private void guncelletusuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_guncelletusuActionPerformed
         dispose();
-        kadinSilGuncelListe yeni = new kadinSilGuncelListe();
+        kadinGuncelle yeni = new kadinGuncelle();
         yeni.setVisible(true);
-        yeni.parent = this;
+        
     }//GEN-LAST:event_guncelletusuActionPerformed
 
     private void listelemetusuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_listelemetusuActionPerformed
         dispose();
-        kadinSilGuncelListe yeni = new kadinSilGuncelListe();
+        kadinSil yeni = new kadinSil();
         yeni.setVisible(true);
         yeni.parent = this;
     }//GEN-LAST:event_listelemetusuActionPerformed
@@ -208,7 +211,7 @@ public class kadinKiyafet extends javax.swing.JFrame {
     }
     public kiyafetEkrani parent;
     public kadinEkle child4;
-    public kadinSilGuncelListe child5;
+    public kadinSil child5;
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton ekletusu;
     private javax.swing.JButton geritusu;

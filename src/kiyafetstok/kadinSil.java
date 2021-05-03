@@ -20,7 +20,7 @@ import kiyafetstok.kadinKiyafet;
  *
  * @author ali_k
  */
-public class kadinSilGuncelListe extends javax.swing.JFrame {
+public class kadinSil extends javax.swing.JFrame {
 
     /**
      * Creates new form ErkekSil
@@ -42,26 +42,23 @@ public class kadinSilGuncelListe extends javax.swing.JFrame {
                 valueOf(kadinlistem.get(i).getTur()),
                 valueOf(kadinlistem.get(i).getStoksayisi()),
                 valueOf(kadinlistem.get(i).getFiyat()),
-                valueOf(kadinlistem.get(i).getTur_id())  
-                             
-        };
+                valueOf(kadinlistem.get(i).getTur_id())
 
-    }
-    TableModel tabloModeli = new DefaultTableModel(
-            dizim,
-            new String[]{"kadin_id", "renk", "marka", "beden","stoksayisi","fiyat","tur_id"}
-    );
+            };
 
-    kadintablo.setModel (tabloModeli);
-
-    System.out.println (kd_dao.findAll
-
-
-
-());
         }
-    public kadinSilGuncelListe() {
-              
+        TableModel tabloModeli = new DefaultTableModel(
+                dizim,
+                new String[]{"kadin_id", "renk", "marka", "beden", "stoksayisi", "fiyat", "tur_id"}
+        );
+
+        kadintablo.setModel(tabloModeli);
+
+        System.out.println(kd_dao.findAll());
+    }
+
+    public kadinSil() {
+
         initComponents();
     }
 
@@ -78,12 +75,12 @@ public class kadinSilGuncelListe extends javax.swing.JFrame {
         silbutonu = new javax.swing.JButton();
         listelebutonu = new javax.swing.JButton();
         geritusu = new javax.swing.JButton();
-        guncellebutonu = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         kadintablo = new javax.swing.JTable();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        silbutonu.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         silbutonu.setText("Sil");
         silbutonu.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -91,6 +88,7 @@ public class kadinSilGuncelListe extends javax.swing.JFrame {
             }
         });
 
+        listelebutonu.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         listelebutonu.setText("Listele");
         listelebutonu.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -98,6 +96,7 @@ public class kadinSilGuncelListe extends javax.swing.JFrame {
             }
         });
 
+        geritusu.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         geritusu.setText("GERİ");
         geritusu.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -105,34 +104,30 @@ public class kadinSilGuncelListe extends javax.swing.JFrame {
             }
         });
 
-        guncellebutonu.setText("Güncelleme");
-
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(geritusu, javax.swing.GroupLayout.DEFAULT_SIZE, 99, Short.MAX_VALUE))
                     .addComponent(listelebutonu, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(silbutonu, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(guncellebutonu, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(silbutonu, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(21, 21, 21)
+                .addComponent(geritusu, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(46, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(geritusu, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(geritusu, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(silbutonu, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(guncellebutonu, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(30, 30, 30)
-                .addComponent(listelebutonu, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(27, 27, 27))
+                .addComponent(silbutonu, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(41, 41, 41)
+                .addComponent(listelebutonu, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(40, 40, 40))
         );
 
         kadintablo.setModel(new javax.swing.table.DefaultTableModel(
@@ -181,53 +176,57 @@ public class kadinSilGuncelListe extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 423, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 305, javax.swing.GroupLayout.PREFERRED_SIZE)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 305, Short.MAX_VALUE))
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void listelebutonuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_listelebutonuActionPerformed
-            doldur();//doldur();// TODO add your handling code here:
+        doldur();//doldur();// TODO add your handling code here:
     }//GEN-LAST:event_listelebutonuActionPerformed
 
     private void geritusuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_geritusuActionPerformed
-         dispose();
+        dispose();
         kadinKiyafet yeni = new kadinKiyafet();
         yeni.setVisible(true);
         yeni.child5 = this;
     }//GEN-LAST:event_geritusuActionPerformed
 
     private void silbutonuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_silbutonuActionPerformed
-       String selectedData = null;
+        String selectedData = null;
         kadintablo.setCellSelectionEnabled(true);
-         ListSelectionModel cellSelectionModel = kadintablo.getSelectionModel();
-    cellSelectionModel.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
-      int[] selectedRow = kadintablo.getSelectedRows();
+        ListSelectionModel cellSelectionModel = kadintablo.getSelectionModel();
+        cellSelectionModel.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
+        int[] selectedRow = kadintablo.getSelectedRows();
         int[] selectedColumns = kadintablo.getSelectedColumns();
         for (int i = 0; i < selectedRow.length; i++) {
-              selectedData = (String) kadintablo.getValueAt(selectedRow[i], 0);
-            
+            selectedData = (String) kadintablo.getValueAt(selectedRow[i], 0);
+
         }
-         System.out.println("Selected: " + selectedData);
-         kadindao kd_kdo = new kadindao();
-         kd_kdo.delete(selectedData);
+        System.out.println("Selected: " + selectedData);
+        kadindao kd_kdo = new kadindao();
+        kd_kdo.delete(selectedData);
     }//GEN-LAST:event_silbutonuActionPerformed
 
     private void kadintabloMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_kadintabloMouseClicked
-     
+
     }//GEN-LAST:event_kadintabloMouseClicked
 
     /**
      * @param args the command line arguments
      */
     public static void main(String args[]) {
-        
+
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
@@ -238,41 +237,33 @@ public class kadinSilGuncelListe extends javax.swing.JFrame {
                 if ("Nimbus".equals(info.getName())) {
                     javax.swing.UIManager.setLookAndFeel(info.getClassName());
                     break;
-                
 
-
-
-}
+                }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(kadinSilGuncelListe.class
+            java.util.logging.Logger.getLogger(kadinSil.class
+                    .getName()).log(java.util.logging.Level.SEVERE, null, ex);
 
-.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        
+        } catch (InstantiationException ex) {
+            java.util.logging.Logger.getLogger(kadinSil.class
+                    .getName()).log(java.util.logging.Level.SEVERE, null, ex);
 
+        } catch (IllegalAccessException ex) {
+            java.util.logging.Logger.getLogger(kadinSil.class
+                    .getName()).log(java.util.logging.Level.SEVERE, null, ex);
 
-
-} catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(kadinSilGuncelListe.class
-
-.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        
-
-
-
-} catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(kadinSilGuncelListe.class
-
-.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        
-
-
-
-} catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(kadinSilGuncelListe.class
-
-.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+            java.util.logging.Logger.getLogger(kadinSil.class
+                    .getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
         //</editor-fold>
@@ -285,15 +276,14 @@ public class kadinSilGuncelListe extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-              
-                new kadinSilGuncelListe().setVisible(true);
+
+                new kadinSil().setVisible(true);
             }
         });
     }
     public kadinKiyafet parent;
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton geritusu;
-    private javax.swing.JButton guncellebutonu;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable kadintablo;
