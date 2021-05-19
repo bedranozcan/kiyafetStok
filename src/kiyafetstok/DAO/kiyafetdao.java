@@ -12,9 +12,10 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 import kiyafetstok.Connector;
+import kiyafetstok.IFacadeKiyafet;
 import kiyafetstok.kiyafet;
 
-public class kiyafetdao {
+public class kiyafetdao implements IFacadeKiyafet {
 
     private Connector connector;
     private Connection connection;
@@ -190,6 +191,26 @@ public class kiyafetdao {
 
     public void setConnection(Connection connection) {
         this.connection = connection;
+    }
+
+    @Override
+    public void insert() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void delete() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void uptade() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void uptadeGuncelle() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     

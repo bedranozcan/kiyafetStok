@@ -14,19 +14,19 @@ import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import kiyafetstok.Connector;
+import kiyafetstok.IFacadeKiyafet;
 import kiyafetstok.cocuk;
 import kiyafetstok.erkek;
-
 
 /**
  *
  * @author Bedran Özcan
  */
-public class cocukdao {
-     private Connector connector;
+public class cocukdao implements IFacadeKiyafet {
+
+    private Connector connector;
     private Connection connection;
 
-  
     public void kiyafet_listele() {
 
         cocukdao cd = new cocukdao();
@@ -64,6 +64,7 @@ public class cocukdao {
 
         return cList;
     }
+
     public cocuk find(int import_id) {
         cocuk getKiyafet = new cocuk();
         List<cocuk> cList = new ArrayList();
@@ -95,7 +96,8 @@ public class cocukdao {
 
         return getKiyafet;
     }
-     public void insert(cocuk cocuk) {
+
+    public void insert(cocuk cocuk) {
 
         try {
             String sql = ("insert into cocuk values(DEFAULT,'" + cocuk.getRenk() + "','" + cocuk.getBeden() + "','" + cocuk.getMarka() + "','" + cocuk.getTur() + "'"
@@ -108,7 +110,6 @@ public class cocukdao {
 
         }
     }
-
 
     public void delete(String selectedID) {
 
@@ -123,20 +124,20 @@ public class cocukdao {
         }
 
     }
-    public void updateGuncelle(cocuk c ){
-         try {
-             String sql = ("update kadin set renk='" + c.getRenk() + "',beden='"
-                     +c.getBeden()+"',marka='"+c.getMarka()+"',tur='"+c.getTur()+"',stoksayisi="
-                     +c.getStoksayisi()+",fiyat=("+c.getFiyat()+"),tur_id="
-                             +c.getTur_id()+" where cocuk_id=" + c.getCocuk_id());
-             Statement st = this.getConnection().createStatement();
-             st.executeUpdate(sql);
-         } catch (SQLException ex) {
-             Logger.getLogger(cocukdao.class.getName()).log(Level.SEVERE, null, ex);
-         }
-               
-           
-       }
+
+    public void updateGuncelle(cocuk c) {
+        try {
+            String sql = ("update cocuk set renk='" + c.getRenk() + "',beden='"
+                    + c.getBeden() + "',marka='" + c.getMarka() + "',tur='" + c.getTur() + "',stoksayisi="
+                    + c.getStoksayisi() + ",fiyat=(" + c.getFiyat() + "),tur_id="
+                    + c.getTur_id() + " where cocuk_id=" + c.getCocuk_id());
+            Statement st = this.getConnection().createStatement();
+            st.executeUpdate(sql);
+        } catch (SQLException ex) {
+            Logger.getLogger(cocukdao.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
+    }
 
     public void update(cocuk kf, cocuk get_Database, int cocuk_id) {
 
@@ -213,5 +214,24 @@ public class cocukdao {
         this.connection = connection;
     }
 
-    
+    @Override
+    public void insert() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void delete() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void uptade() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void uptadeGuncelle() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
 }

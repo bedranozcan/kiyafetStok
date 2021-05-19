@@ -14,6 +14,7 @@ import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import kiyafetstok.Connector;
+import kiyafetstok.IFacadeKiyafet;
 import kiyafetstok.kadin;
 import kiyafetstok.kiyafet;
 
@@ -21,7 +22,7 @@ import kiyafetstok.kiyafet;
  *
  * @author Bedran Özcan
  */
-public class kadindao {
+public class kadindao implements IFacadeKiyafet {
      private Connector connector;
     private Connection connection;
 
@@ -209,6 +210,26 @@ public class kadindao {
 
     public void setConnection(Connection connection) {
         this.connection = connection;
+    }
+
+    @Override
+    public void insert() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void delete() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void uptade() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void uptadeGuncelle() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     

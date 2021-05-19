@@ -13,6 +13,7 @@ import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import kiyafetstok.Connector;
+import kiyafetstok.IFacadeKiyafet;
 import kiyafetstok.erkek;
 import kiyafetstok.kadin;
 
@@ -20,7 +21,7 @@ import kiyafetstok.kadin;
  *
  * @author Bedran Özcan
  */
-public class erkekdao {
+public class erkekdao implements IFacadeKiyafet {
     private Connector connector;
     private Connection connection;
 
@@ -123,7 +124,7 @@ public class erkekdao {
     }
     public void updateGuncelle(erkek e ){
          try {
-             String sql = ("update kadin set renk='" + e.getRenk() + "',beden='"
+             String sql = ("update erkek set renk='" + e.getRenk() + "',beden='"
                      +e.getBeden()+"',marka='"+e.getMarka()+"',tur='"+e.getTur()+"',stoksayisi="
                      +e.getStoksayisi()+",fiyat=("+e.getFiyat()+"),tur_id="
                              +e.getTur_id()+" where erkek_id=" + e.getErkek_id());
@@ -209,6 +210,26 @@ public class erkekdao {
 
     public void setConnection(Connection connection) {
         this.connection = connection;
+    }
+
+    @Override
+    public void insert() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void delete() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void uptade() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void uptadeGuncelle() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     
