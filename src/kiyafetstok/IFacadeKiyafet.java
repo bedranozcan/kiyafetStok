@@ -5,7 +5,6 @@
  */
 package kiyafetstok;
 
-import java.sql.Connection;
 
 /**
  *

@@ -18,7 +18,9 @@ import kiyafetstok.DAO.erkekdao;
  * @author Bedran Özcan
  */
 public class erkekGuncelle extends javax.swing.JFrame {
+    
     public int erkek_id;
+    
     public void listele() {
         erkekdao edao = new erkekdao();
         edao.findAll();
@@ -289,7 +291,6 @@ public class erkekGuncelle extends javax.swing.JFrame {
       erkekdao edao = new erkekdao();
       e.setRenk(renk.getText());
       e.setBeden(beden.getText());
-      
       e.setMarka(marka.getText());
       e.setTur(tur.getText());
       int stok2 = Integer.parseInt(stok.getText());

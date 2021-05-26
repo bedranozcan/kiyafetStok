@@ -259,8 +259,8 @@ public class kadinGuncelle extends javax.swing.JFrame {
     private void guncelletusuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_guncelletusuActionPerformed
         kadin k = new kadin();
         kadindao k_dao = new kadindao();
+          k.setRenk(textrenk.getText());
         k.setBeden(textbeden.getText());
-        k.setRenk(textrenk.getText());
         k.setMarka(textmarka.getText());
         k.setTur(texttur.getText());
         int stok = Integer.parseInt(textstok.getText());
