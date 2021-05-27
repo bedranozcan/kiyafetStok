@@ -6,7 +6,7 @@
 package kiyafetstok;
 
 import java.awt.Image;
-import kiyafetstok.kadinEkle;
+import kiyafetstok.kadinEkleSozel;
 import javax.swing.ImageIcon;
 
 /**
@@ -37,10 +37,12 @@ public class kadinKiyafet extends javax.swing.JFrame {
         guncelletusu = new javax.swing.JButton();
         listelemetusu = new javax.swing.JButton();
         geritusu = new javax.swing.JButton();
+        sayisalgirdi = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        ekletusu.setText("Ekle");
+        ekletusu.setFont(new java.awt.Font("Times New Roman", 0, 13)); // NOI18N
+        ekletusu.setText("Sözel Girdiyle Ekleme");
         ekletusu.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 ekletusuActionPerformed(evt);
@@ -75,57 +77,59 @@ public class kadinKiyafet extends javax.swing.JFrame {
             }
         });
 
+        sayisalgirdi.setText("Sözel Girdiyle Ekleme");
+        sayisalgirdi.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                sayisalgirdiActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(guncelletusu, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(listelemetusu))
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(ekletusu, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 176, Short.MAX_VALUE)
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(listelemetusu, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(guncelletusu, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(siltusu, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(sayisalgirdi)))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                         .addComponent(geritusu, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(29, 29, 29))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(siltusu, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 30, Short.MAX_VALUE)
+                        .addComponent(ekletusu, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(122, 122, 122))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(19, 19, 19)
-                        .addComponent(ekletusu, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(ekletusu, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(geritusu, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(39, 39, 39)
+                .addGap(18, 18, 18)
+                .addComponent(sayisalgirdi, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(27, 27, 27)
                 .addComponent(siltusu, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(82, 82, 82)
+                .addGap(18, 18, 18)
                 .addComponent(guncelletusu, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(37, 37, 37)
+                .addGap(27, 27, 27)
                 .addComponent(listelemetusu, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(27, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 407, Short.MAX_VALUE)
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 390, Short.MAX_VALUE)
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         getAccessibleContext().setAccessibleName("erkekpanel");
@@ -143,7 +147,7 @@ public class kadinKiyafet extends javax.swing.JFrame {
 
     private void ekletusuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ekletusuActionPerformed
         dispose();
-        kadinEkle yeni = new kadinEkle();
+        kadinEkleSozel yeni = new kadinEkleSozel();
         yeni.setVisible(true);
         yeni.parent = this;
     }//GEN-LAST:event_ekletusuActionPerformed
@@ -159,7 +163,7 @@ public class kadinKiyafet extends javax.swing.JFrame {
         dispose();
         kadinGuncelle yeni = new kadinGuncelle();
         yeni.setVisible(true);
-        
+
     }//GEN-LAST:event_guncelletusuActionPerformed
 
     private void listelemetusuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_listelemetusuActionPerformed
@@ -168,6 +172,13 @@ public class kadinKiyafet extends javax.swing.JFrame {
         yeni.setVisible(true);
         yeni.parent = this;
     }//GEN-LAST:event_listelemetusuActionPerformed
+
+    private void sayisalgirdiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sayisalgirdiActionPerformed
+        dispose();
+        kadinEkleSayisal yeni = new kadinEkleSayisal();
+        yeni.setVisible(true);
+        yeni.parent = this;
+    }//GEN-LAST:event_sayisalgirdiActionPerformed
 
     /**
      * @param args the command line arguments
@@ -202,6 +213,30 @@ public class kadinKiyafet extends javax.swing.JFrame {
         //</editor-fold>
         //</editor-fold>
         //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
@@ -212,7 +247,7 @@ public class kadinKiyafet extends javax.swing.JFrame {
         });
     }
     public kiyafetEkrani parent;
-    public kadinEkle child4;
+    public kadinEkleSozel child4;
     public kadinSil child5;
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton ekletusu;
@@ -220,6 +255,7 @@ public class kadinKiyafet extends javax.swing.JFrame {
     private javax.swing.JButton guncelletusu;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JButton listelemetusu;
+    private javax.swing.JButton sayisalgirdi;
     private javax.swing.JButton siltusu;
     // End of variables declaration//GEN-END:variables
 }
