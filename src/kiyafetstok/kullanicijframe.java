@@ -5,6 +5,10 @@
  */
 package kiyafetstok;
 
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.Statement;
 import kiyafetstok.kiyafetEkrani;
 import javax.swing.JOptionPane;
 
@@ -33,8 +37,8 @@ public class kullanicijframe extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        jPasswordField1 = new javax.swing.JPasswordField();
-        jTextField1 = new javax.swing.JTextField();
+        sifre = new javax.swing.JPasswordField();
+        kullaniciadi = new javax.swing.JTextField();
         giristusu = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -45,16 +49,16 @@ public class kullanicijframe extends javax.swing.JFrame {
         jLabel2.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
         jLabel2.setText("Şifre");
 
-        jPasswordField1.addActionListener(new java.awt.event.ActionListener() {
+        sifre.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jPasswordField1ActionPerformed(evt);
+                sifreActionPerformed(evt);
             }
         });
 
-        jTextField1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+        kullaniciadi.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        kullaniciadi.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
+                kullaniciadiActionPerformed(evt);
             }
         });
 
@@ -77,8 +81,8 @@ public class kullanicijframe extends javax.swing.JFrame {
                     .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jPasswordField1, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(kullaniciadi, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(sifre, javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(giristusu, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 164, Short.MAX_VALUE))
                 .addContainerGap(149, Short.MAX_VALUE))
         );
@@ -87,12 +91,12 @@ public class kullanicijframe extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(86, 86, 86)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(kullaniciadi, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jPasswordField1, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(sifre, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(26, 26, 26)
                 .addComponent(giristusu, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(85, Short.MAX_VALUE))
@@ -113,29 +117,43 @@ public class kullanicijframe extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+    private void kullaniciadiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_kullaniciadiActionPerformed
 
-    }//GEN-LAST:event_jTextField1ActionPerformed
+    }//GEN-LAST:event_kullaniciadiActionPerformed
 
     private void giristusuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_giristusuActionPerformed
-         dispose();
-        String k_ad = "Admin";
-        String password = "1234";
-        if (jTextField1.getText().equals(k_ad) && jPasswordField1.getText().equals(password)) {
-            JOptionPane.showMessageDialog(null, "Giriş Başarılı");
-            kiyafetEkrani yeni = new kiyafetEkrani();
-            yeni.setVisible(true);
-            yeni.parent = this;
-        } else {
-            JOptionPane.showMessageDialog(null, "Kullanıcı adı veya şifre yanlış");
+       
+        try {
+            Class.forName("com.mysql.jdbc.Driver").newInstance();
+            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/kiyafetstok?user=root&password=123");
 
+            String ad = kullaniciadi.getText();
+            String password = sifre.getText();
+            Statement stm=con.createStatement();
+            String sql="select * from kullanici where kullanici_adi='"+ad+"'and sifre='"+password+"'";
+            ResultSet rs=stm.executeQuery(sql);
+            
+            if(rs.next()){
+                dispose();
+                kiyafetEkrani ke=new kiyafetEkrani();
+              ke.show();
+                
+            }else{
+                JOptionPane.showMessageDialog(this, "Kullanici adi veya şifre yanlış!");
+                kullaniciadi.setText("");
+                sifre.setText("");
+            }
+            con.close();
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
         }
+
 
     }//GEN-LAST:event_giristusuActionPerformed
 
-    private void jPasswordField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jPasswordField1ActionPerformed
+    private void sifreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sifreActionPerformed
 
-    }//GEN-LAST:event_jPasswordField1ActionPerformed
+    }//GEN-LAST:event_sifreActionPerformed
 
     /**
      * @param args the command line arguments
@@ -178,7 +196,7 @@ public class kullanicijframe extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JPasswordField jPasswordField1;
-    private javax.swing.JTextField jTextField1;
+    private javax.swing.JTextField kullaniciadi;
+    private javax.swing.JPasswordField sifre;
     // End of variables declaration//GEN-END:variables
 }
