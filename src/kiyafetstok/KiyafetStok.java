@@ -6,6 +6,11 @@ import java.util.Scanner;
 public class KiyafetStok {
 
     public static void main(String[] args) {
+        
+        System.out.println("--------------------");
+        siralamaYazdir(EnumBolum.SozelSira);
+        System.out.println("--------------------");
+        siralamaYazdir(EnumBolum.SayisalSira);
         Connector db = new Connector();
         db.connect();
         Scanner input = new Scanner(System.in);
@@ -25,6 +30,11 @@ public class KiyafetStok {
         if (secim == 3) {
             csecim.csecim();
         }
+    }
+     private static void siralamaYazdir(EnumBolum bolum) {
+        Admin admin = new Admin(bolum);
+        String oncelikSiralamasi = admin.getOncelikSiralamasi();
+        System.out.println(oncelikSiralamasi);
     }
 
 }

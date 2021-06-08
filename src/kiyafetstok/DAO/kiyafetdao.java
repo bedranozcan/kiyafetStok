@@ -15,7 +15,7 @@ import kiyafetstok.Connector;
 import kiyafetstok.IFacadeKiyafet;
 import kiyafetstok.kiyafet;
 
-public class kiyafetdao implements IFacadeKiyafet {
+public class kiyafetdao  {
 
     private Connector connector;
     private Connection connection;
@@ -193,25 +193,7 @@ public class kiyafetdao implements IFacadeKiyafet {
         this.connection = connection;
     }
 
-    @Override
-    public void insert() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    @Override
-    public void delete() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    @Override
-    public void uptade() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    @Override
-    public void uptadeGuncelle() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+    
 
     
 }

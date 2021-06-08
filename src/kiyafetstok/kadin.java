@@ -5,12 +5,15 @@
  */
 package kiyafetstok;
 
+import kiyafetstok.DAO.kadindao;
+
 /**
  *
  * @author Bedran Özcan
  */
-public class kadin extends kiyafet{
- private   int kadin_id;
+public class kadin extends kiyafet implements IFacadeKiyafet {
+
+    private int kadin_id;
 
     public int getKadin_id() {
         return kadin_id;
@@ -18,6 +21,17 @@ public class kadin extends kiyafet{
 
     public void setKadin_id(int kadin_id) {
         this.kadin_id = kadin_id;
+    }
+
+    @Override
+    public void listele() {
+        kadindao kdao = new kadindao();
+        kdao.kiyafet_listele();
+    }
+
+    @Override
+    public String toString() {
+        return "kiyafet{" + "kadin_id=" + kadin_id + ",renk=" + renk + ", beden=" + beden + ", marka=" + marka + ", tur=" + tur + ", stoksayisi=" + stoksayisi + ", fiyat=" + fiyat + ", tur_id=" + tur_id + '}';
     }
 
 }

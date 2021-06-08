@@ -11,9 +11,6 @@ package kiyafetstok;
  * @author ali_k
  */
 public interface IFacadeKiyafet {
-    public void insert();
-    public void delete();
-    public void uptade();
-    public void uptadeGuncelle();
+    public void listele();
    
 }

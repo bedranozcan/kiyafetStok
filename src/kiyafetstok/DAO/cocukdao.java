@@ -22,7 +22,7 @@ import kiyafetstok.erkek;
  *
  * @author Bedran Özcan
  */
-public class cocukdao implements IFacadeKiyafet {
+public class cocukdao  {
 
     private Connector connector;
     private Connection connection;
@@ -214,24 +214,5 @@ public class cocukdao implements IFacadeKiyafet {
         this.connection = connection;
     }
 
-    @Override
-    public void insert() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    @Override
-    public void delete() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    @Override
-    public void uptade() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    @Override
-    public void uptadeGuncelle() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
+    
 }

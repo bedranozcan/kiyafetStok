@@ -29,7 +29,7 @@ public class crudTest {
 
         erkek e = new erkek();
         erkekdao edao = new erkekdao();
-        e.setRenk("Kırmızı");
+        e.setRenk("Kirmizi");
         e.setBeden("S");
         e.setMarka("Nike");
         e.setTur("Esofman");

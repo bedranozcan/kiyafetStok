@@ -21,7 +21,7 @@ import kiyafetstok.kadin;
  *
  * @author Bedran Özcan
  */
-public class erkekdao implements IFacadeKiyafet {
+public class erkekdao  {
     private Connector connector;
     private Connection connection;
 
@@ -212,25 +212,6 @@ public class erkekdao implements IFacadeKiyafet {
         this.connection = connection;
     }
 
-    @Override
-    public void insert() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    @Override
-    public void delete() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    @Override
-    public void uptade() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    @Override
-    public void uptadeGuncelle() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
+    
     
 }

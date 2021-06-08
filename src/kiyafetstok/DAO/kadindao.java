@@ -22,7 +22,7 @@ import kiyafetstok.kiyafet;
  *
  * @author Bedran Özcan
  */
-public class kadindao implements IFacadeKiyafet {
+public class kadindao {
      private Connector connector;
     private Connection connection;
 
@@ -212,25 +212,7 @@ public class kadindao implements IFacadeKiyafet {
         this.connection = connection;
     }
 
-    @Override
-    public void insert() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    @Override
-    public void delete() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    @Override
-    public void uptade() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    @Override
-    public void uptadeGuncelle() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+    
 
     
 }

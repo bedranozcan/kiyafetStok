@@ -16,7 +16,7 @@ public class Admin {
 
     public Admin(EnumBolum bolum) {
         this.bolum = bolum;
-       
+
         switch (bolum) {
             case SozelSira:
                 kayitsirasi = new SozelSiraStrateji();
@@ -28,19 +28,19 @@ public class Admin {
             default:
                 break;
         }
-        
-    }
-     public String getOncelikSiralamasi(){
-        System.out.println(bolum +" için strateji:");
-        String siralama="Önce "+ kayitsirasi.getBirinci()+" Ekle"+
-                " Sonra "+kayitsirasi.getİkinci()+" Ekle"+
-                ","+kayitsirasi.getUcuncu()+" Ekle"+
-                ","+kayitsirasi.getDorduncu()+" Ekle"+
-                ","+kayitsirasi.getBesinci()+" Ekle"+
-                ","+kayitsirasi.getAltinci()+" Ekle"+
-                " Son olarak"+kayitsirasi.getYedinci()+" Ekle";
-                return siralama;
-    }
-   
-}
 
+    }
+
+    public String getOncelikSiralamasi() {
+        System.out.println(bolum + " için strateji:");
+        String siralama = "Önce " + kayitsirasi.getBirinci() + " Ekle"
+                + " Sonra " + kayitsirasi.getİkinci() + " Ekle"
+                + "," + kayitsirasi.getUcuncu() + " Ekle"
+                + "," + kayitsirasi.getDorduncu() + " Ekle"
+                + "," + kayitsirasi.getBesinci() + " Ekle"
+                + "," + kayitsirasi.getAltinci() + " Ekle"
+                + " Son olarak " + kayitsirasi.getYedinci() + " Ekle";
+        return siralama;
+    }
+
+}
